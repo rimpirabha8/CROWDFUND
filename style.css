@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(guerrillabuzz-_jWOd4gh8kk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: Black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h1 {
+    font-size: 72px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid white;
+    background: red;
+    transition: 1s;
+}
+
+.Categories {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campaign-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campaign-col img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+.Causes {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.about-text {
+    flex-basis: 48%;
+}
+
+.about-text h5 {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    flex-basis: 48%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff8c00;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #e67e00;
+}
+
+.contact {
+    width: 80%;
+    margin: 100px auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(pexels-cottonbro-10600774.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.contact h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    caret-color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hero-btn:hover {
+    background: #ff4b2b;
+    border-color: #ff4b2b;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+}
+
+.footer h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px auto;
+    max-width: 700px;
+}
