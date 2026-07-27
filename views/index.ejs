@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROWD FUNDING</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="/"><img src="/crowdfunding.png" alt="crowdfunding Logo"></a>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#campaigns">Campaigns</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+
+                    <% if (user) { %>
+                        <li>Welcome, <%= user.name %>
+                        </li>
+                        <li><a href="/logout">Logout</a></li>
+                        <% } else { %>
+                            <li><a href="/register">Sign Up</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <% } %>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <h1>CROWD FUNDING</h1>
+            <p>
+                Every Small Donation Creates a Big Impact<br>
+                Support a Cause, Change a Life
+            </p>
+
+            <p>Together we will build our future.</p>
+
+            <a href="#campaigns" class="hero-btn">
+                Explore Campaigns
+            </a>
+        </div>
+    </section>
+
+    <section class="Categories" id="campaigns">
+
+        <h1>Campaign Categories</h1>
+
+        <p>
+            Explore different fundraising campaigns and support the cause that matters most.
+        </p>
+
+        <div class="row">
+
+            <% campaigns.forEach(campaign=> { %>
+
+                <div class="campaign-col">
+
+                    <img src="<%= campaign.image %>" alt="<%= campaign.name %>">
+
+                    <div class="layer">
+                        <h3>
+                            <%= campaign.name %>
+                        </h3>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:<%= (campaign.collected / campaign.goal) * 100 %>%;">
+                        </div>
+                    </div>
+
+                    <p>
+                        Raised ₹<%= campaign.collected.toLocaleString() %>
+                            of ₹<%= campaign.goal.toLocaleString() %>
+                    </p>
+
+                    <a href="/campaign/<%= campaign.id %>" class="donate-btn">
+                        Donate Now
+                    </a>
+
+                </div>
+
+                <% }) %>
+
+        </div>
+
+    </section>
+
+    <section class="Causes">
+        <h1>Causes We Support</h1>
+
+        <p>
+            Every contribution helps create positive change by supporting education,
+            healthcare and animal welfare.
+        </p>
+    </section>
+
+    <section class="about">
+
+        <div class="about-row">
+
+            <div class="about-text">
+                <h5>About Us</h5>
+                <h1>Our Mission</h1>
+
+                <p>
+                    We work to provide food, education and healthcare to the community.
+                    Join us to build a better future.
+                </p>
+
+                <a href="/about" class="btn">
+                    LEARN MORE
+                </a>
+            </div>
+
+            <div class="about-img">
+                <img src="/pexels-tima-miroshnichenko-6913298.jpg">
+            </div>
+
+        </div>
+
+        <div class="about-row">
+
+            <div class="about-img">
+                <img src="/pexels-jakubzerdzicki-32045959.jpg">
+            </div>
+
+            <div class="about-text">
+
+                <h5>What We Do</h5>
+
+                <h1>Our Vision</h1>
+
+                <p>
+                    Our vision is a world where every child has access to basic needs.
+                    We aim to reach one million people by 2030 through your support.
+                </p>
+
+                <a href="/about" class="btn">
+                    LEARN MORE
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact">
+
+        <h1>Together We Can Make a Difference</h1>
+
+        <p>
+            Every small donation can change someone's life. If you have any
+            questions or want to start your own fundraising campaign,
+            we are here to help.
+        </p>
+
+        <a href="/contact" class="hero-btn">
+            CONTACT US
+        </a>
+
+    </section>
+
+    <section class="footer">
+
+        <h3>About Our Platform</h3>
+
+        <p>
+            Our crowdfunding platform helps people raise funds for education,
+            medical emergencies and animal welfare.
+        </p>
+
+        <p>
+            Made with ❤️ by Rimpi Rabha | 2026 Crowdfunding Platform
+        </p>
+
+    </section>
+
+</body>
+
+</html>
